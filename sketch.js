@@ -31,11 +31,12 @@ var redWins = (redWin1 || redWin2 || redWin3 || redWin4 || redWin5 || redWin6 ||
 var redCount = getRedCount()
     //console.log('redCount is: ', redCount)
   var blueCount = getBlueCount()
-    //console.log('blueCount is: ', blueCount)
+    console.log('blueCount is: ', blueCount)
   var fullGrid = redCount + blueCount
   console.log('fullGrid is: ', fullGrid)
 var draw = (fullGrid === 9) && (!blueWins) && (!redWins)
-if (blueWins) { //playerOne is always blue
+if (blueWins) { 
+  //playerOne is always blue
     winner = blueWins
     console.log(`${playerOne} wins!`)
     $("#gameResult, #congratsOrSorry").removeClass("displayNone")
@@ -45,7 +46,8 @@ if (blueWins) { //playerOne is always blue
     disableRemainingItems()
     return winner
   }
-  if (redWins) { //red is computer
+  if (redWins) { 
+    //red is computer
     winner = redWins
     console.log(`${computer} wins!`)
     $("#gameResult, #congratsOrSorry").removeClass("displayNone")
